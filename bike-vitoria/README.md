@@ -6,7 +6,7 @@ This project gets information from
 and prints stations status on the console
 
 # Screenshot
-![Screenshot](/screenshot.png?raw=true "Screenshot")
+![Screenshot](https://raw.githubusercontent.com/samverneck/GeoJson-Lab/master/bike-vitoria/screenshot.png "Screenshot")
 
 # Install
 1. Install Node and NPM (consider using [NVM](https://github.com/creationix/nvm) for the task)
