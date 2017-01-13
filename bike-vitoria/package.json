@@ -1,0 +1,62 @@
+{
+  "name": "@josmardias/bike-vitoria",
+  "version": "0.0.1",
+  "description": "Fetch Bike Vitoria status",
+  "license": "MIT",
+  "author": "Josmar Dias",
+  "homepage": "https://github.com/josmardias/bike-vitoria#readme",
+  "bugs": {
+    "url": "https://github.com/josmardias/bike-vitoria/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josmardias/bike-vitoria.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "fixpack": "fixpack",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint --silent -- --fix",
+    "preinstall": "command -v nvc >/dev/null 2>&1; if [ $? -eq 0 ]; then nvc; fi",
+    "prepublish": "publish-please guard",
+    "pretest": "nvc",
+    "publish-please": "publish-please",
+    "start": "node $npm_package_main",
+    "test": "mocha --opts scripts/mocha.opts src/**/*-test.js",
+    "test:watch": "npm run test -s -- --reporter min --watch",
+    "test:debug": "node-debug _mocha --opts scripts/mocha.opts src/**/*-test.js"
+  },
+  "dependencies": {
+    "babel-preset-es2015-node": "~6.1.0",
+    "babel-register": "~6.16.3",
+    "chalk": "~1.1.3",
+    "columnify": "~1.5.4",
+    "commander": "~2.9.0",
+    "lodash": "~4.16.4",
+    "ora": "~0.3.0",
+    "request": "~2.75.0",
+    "request-promise": "~4.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "~6.17.0",
+    "babel-polyfill": "~6.16.0",
+    "chai": "~3.5.0",
+    "chai-as-promised": "~6.0.0",
+    "eslint": "~3.7.1",
+    "eslint-config-airbnb-base": "~8.0.0",
+    "eslint-plugin-import": "~2.0.1",
+    "eslint-plugin-mocha": "~4.7.0",
+    "fixpack": "~2.3.1",
+    "get-stream": "~2.3.0",
+    "mocha": "~3.1.2",
+    "mocha-clean": "~1.0.0",
+    "nock": "~8.1.0",
+    "node-inspector": "~0.12.8",
+    "node-version-checker": "~2.0.0",
+    "publish-please": "~2.2.0"
+  },
+  "engines": {
+    "node": ">= 6",
+    "npm": ">= 3"
+  }
+}
